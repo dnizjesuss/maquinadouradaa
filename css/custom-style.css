@@ -1,0 +1,376 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+/* CSS personalizado */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+header {
+background-color: transparent;
+color: white;
+padding: 20px 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 10;
+text-transform: uppercase;
+transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo escuro quando rola */
+}
+
+
+header .navbar-brand {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-item .nav-link {
+	color: white;
+	border-radius: 5px;
+	margin: 0 15px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item .nav-link:hover {
+	background-color: #B47F41;
+	color: white;
+}
+
+.btn-whatsapp {
+	color: white;
+	border: 1px solid #B47F41;
+	border-radius: 5px;
+	background-color: transparent;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-whatsapp:hover {
+	background-color: #B47F41;
+	border-color: #B47F41;
+	color: white;
+}
+
+.full-screen-section {
+	height: 100vh;
+	background: url('/img/intro-bg-01.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed; /* Imagem de fundo fixa */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.full-screen-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7); /* Escurecimento com opacidade */
+	z-index: -1;
+}
+
+.logo {
+	max-width: 100%;
+	height: auto;
+}
+
+footer {
+	background-color: #B47F41; /* cor branca com opacidade para ver o fundo */
+	padding: 20px 0;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	color: white;
+}
+
+.services-section {
+	background-color: #0f0a06;
+	color: white;
+	padding: 50px 0;
+}
+
+.services-section h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.services-item {
+	margin-bottom: 30px;
+}
+
+.services-item h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.services-item p {
+	font-size: 16px;
+}
+
+.new-section {
+	display: flex;
+	justify-content: space-between;
+	background-color: #e9ecef; /* Escolha uma cor de fundo */
+}
+
+.info-box {
+  display: flex;
+	background-color: #B47F41;
+	color: white;
+	padding-top: 20px;
+	width: 70%;
+	box-sizing: border-box; /* Inclui o padding na largura total */
+	align-content: center;
+}
+
+.row2 {
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: 200px;
+}
+
+.info-box h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.info-box p {
+	font-size: 16px;
+}
+
+.info-item {
+	margin-bottom: 20px; /* Espaço entre os itens */
+	flex: 1;
+}
+
+.info-item h4 {
+	font-size: 20px; /* Tamanho do título dos itens */
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.info-item p {
+	font-size: 16px; /* Tamanho do texto dos itens */
+	text-align: center;
+}
+
+.mark-box {
+background-color: rgba(180, 127, 65, 0.4); /* Cor da caixa */
+padding: 20px;
+width: 30%;
+box-sizing: border-box; /* Inclui o padding na largura total */
+text-align: center; /* Centraliza o texto horizontalmente */
+display: flex; /* Ativa o modo flexbox */
+align-items: center; /* Centraliza o texto verticalmente */
+justify-content: center; /* Centraliza o texto horizontalmente */
+position: relative; /* Necessário para o efeito de animação */
+overflow: hidden; /* Garante que o conteúdo não saia da área da caixa */
+transition: background-color 0.3s; /* Transição para a cor de fundo */
+}
+
+.mark-box a {
+	color: white; /* Cor do texto do link */
+	text-decoration: none; /* Remove o sublinhado do link */
+	width: 100%; /* Garante que o link ocupe toda a área da div */
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mark-box:hover {
+	background-color: rgba(180, 127, 65, 0.6); /* Cor alterada no hover */
+}
+
+@media (max-width: 750px) {
+.info-box {
+display: none; /* Esconde a caixa de informações */
+}
+
+.new-section {
+display: flex;
+padding: 0; /* Remove o padding */
+}
+
+.mark-box {
+width: 100%; /* Ajuste a largura conforme necessário */
+margin: 0; /* Remove a margem */
+text-align: center; /* Centraliza o texto dentro da caixa de marcação */
+position: relative; /* Necessário para o efeito do ::after */
+padding: 20px; /* Adiciona um pouco de padding para o texto extra */
+display: flex; /* Flexbox layout */
+flex-direction: column; /* Organiza o conteúdo verticalmente */
+align-items: center; /* Centraliza horizontalmente */
+}
+
+.mark-box::after {
+content: "Contacte-nos: 913703899 / 10 manhã - 08 / aberto: Segunda - Sabado fechado: Domingo";
+margin-top: 15px; /* Espaço entre o link e o texto adicional */
+font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+color: white; /* Ajuste a cor do texto conforme necessário */
+font-family: 'Source Sans Pro', sans-serif;
+text-align: center; /* Centraliza o texto */
+}
+}
+
+.pricing-section {
+	background: url('/img/big_image_1.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed; /* Imagem de fundo fixa */
+	padding: 50px 0;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+.pricing-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Escurecimento com opacidade */
+	z-index: -1;
+}
+
+.card {
+	background-color: rgba(180, 127, 65, 0.4); /* Cor amarela torrada com transparência */
+	border: none;
+	padding: 20px;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar os cartões */
+}
+
+.card h4 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.card p {
+	font-size: 16px;
+}
+
+.service-image {
+	width: 75px; /* Define a largura da imagem */
+	height: 75px; /* Define a altura da imagem */
+	object-fit: cover; /* Garante que a imagem cubra a área definida */
+	margin-bottom: 10px; /* Espaço entre a imagem e o título */
+}
+
+.services-item {
+	text-align: center; /* Centraliza o texto e a imagem */
+	margin-bottom: 30px; /* Espaço inferior para separar os itens */
+}
+
+.services-item h3 {
+	margin-top: 10px; /* Espaço superior para separar o título da imagem */
+}
+
+.titulos {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+.titulos2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.titulos3 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.titulos4 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.section-title {
+text-align: center;
+margin-top: 40px;
+font-size: 2.5rem;
+color: #343a40;
+}
+.section-description {
+text-align: center;
+margin: 20px 0;
+font-size: 1.2rem;
+color: #6c757d;
+}
+.gallery-section {
+padding: 20px 0;
+}
+.gallery-title {
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 2.5rem;
+color: #343a40;
+}
+.gallery-image {
+margin-bottom: 30px;
+}
+.gallery-image img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+	width: 50px; /* Circle diameter */
+	height: 50px; /* Circle diameter */
+	border-radius: 50%; /* Makes it a circle */
+	background-color: #4E2A1A; /* Dark brown background */
+	color: #fff; /* Icon color */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+	text-decoration: none; /* Removes underline */
+	font-size: 1.5rem; /* Icon size */
+}
+.social-icon:hover {
+	color: #ddd; /* Icon color on hover */
+}
+.container4 {
+	display: flex;
+	justify-content: center;
+}
+.container4 a {
+	margin: 0 10px; /* Space between icons */
+}
