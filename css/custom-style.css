@@ -65,7 +65,7 @@ header .navbar-brand {
 
 .full-screen-section {
 	height: 100vh;
-	background: url('intro-bg-01.jpg') no-repeat center center;
+	background: url('img/intro-bg-01.jpg') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed; /* Imagem de fundo fixa */
 	display: flex;
@@ -234,7 +234,7 @@ text-align: center; /* Centraliza o texto */
 }
 
 .pricing-section {
-	background: url('big_image_1.jpg') no-repeat center center;
+	background: url('img/big_image_1.jpg') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed; /* Imagem de fundo fixa */
 	padding: 50px 0;
